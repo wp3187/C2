@@ -1,69 +1,33 @@
-local CoreGui = game:GetService("StarterGui")
+当地的OrionLib=loadstring(游戏：HttpGet("https://raw.githubusercontent.com/sharksharksharkshark/Hub/main/1lolll.txt"))()
+当地的LBLG=Instance.new("ScreenGui"，getParent)
+当地的LBL=Instance.new("TextLabel"，getParent)
+当地的player=game.Players.LocalPlayer
 
-CoreGui:SetCore("SendNotification", {
-    Title = "确认身份",
-    Text = "正在验证....",
-    Duration = 5, --时间
-})
+LBLG.Name="LBLG"
+LBLG.Parent=game.CoreGuui
+LBLG.ZIndexBehavior=枚举.ZIndexBehavior.Sibling
+LBLG.Enabled=正确
+LBL.Name="LBL"
+LBL.Parent=LBLG
+LBL.BackgroundColor3=Color3.new(1,1,1)
+LBL.BackgroundTransparency=1
+LBL.BorderColor3=Color3.new(0,0,0)
+LBL.Position=UDim2.new(0.75,0,0.010,0)
+LBL.Size=UDim2.new(0,133,0,30)
+LBL.Font=枚举.Font.GothamSemibold
+LBL.Text="TextLabel"
+LBL.TextColor3=Color3.new(1,1,1)
+LBL.TextScaled=正确
+LBL.TextSize=14
+LBL.TextWrapped=正确
+LBL.Visible=正确
 
-local a=tostring(game.Players.LocalPlayer.Character);
+当地的FpsLabel=LBL
+当地的心跳=游戏：GetService("运行服务").心跳
+当地的LastIteration，Start
+当地的FrameUpdateTable={}
 
-if a=="wp3187"then
-_G.wp3187=true
-elseif a=="wp3187"then
-_G.wp3187=true
-end
-if _G.这里必须要跟“wp3187”一样==true then
-    local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-    Title = "验证结果",
-    Text = a.."验证身份成功",
-    Duration = 5,
-})
-  wait(3) --等待三秒
-  --C脚本
-    else --验证失败执行↓
-setclipboard("QQ群")
-local CoreGui =814705174 game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-    Title = "验证失败",
-    Text = "你并没有白名单已复制群号加入群获得白名单",
-    Duration = 10, --时间
-})
-end
-
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sharksharksharkshark/Hub/main/1lolll.txt"))()
-local LBLG = Instance.new("ScreenGui", getParent)
-local LBL = Instance.new("TextLabel", getParent)
-local player = game.Players.LocalPlayer
-
-LBLG.Name = "LBLG"
-LBLG.Parent = game.CoreGui
-LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-LBLG.Enabled = true
-LBL.Name = "LBL"
-LBL.Parent = LBLG
-LBL.BackgroundColor3 = Color3.new(1, 1, 1)
-LBL.BackgroundTransparency = 1
-LBL.BorderColor3 = Color3.new(0, 0, 0)
-LBL.Position = UDim2.new(0.75,0,0.010,0)
-LBL.Size = UDim2.new(0, 133, 0, 30)
-LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = "TextLabel"
-LBL.TextColor3 = Color3.new(1, 1, 1)
-LBL.TextScaled = true
-LBL.TextSize = 14
-LBL.TextWrapped = true
-LBL.Visible = true
-
-local FpsLabel = LBL
-local Heartbeat = game:GetService("RunService").Heartbeat
-local LastIteration, Start
-local FrameUpdateTable = { }
-
-local function HeartbeatUpdate()
+当地的 功能HeartbeatUpdate()
 	LastIteration = tick()
 	for Index = #FrameUpdateTable, 1, -1 do
 		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
